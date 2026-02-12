@@ -1,0 +1,9 @@
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+
+# Add this to ~/.gitconfig and uncomment to import this file
+# [include]
+#    path = ~/.gitconfig-aliases
