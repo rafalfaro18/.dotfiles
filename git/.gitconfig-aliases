@@ -4,6 +4,6 @@
     st = status
     br = branch
 
-# Add this to ~/.gitconfi to import this file
+# Add this to ~/.gitconfig and uncomment to import this file
 # [include]
 #    path = ~/.gitconfig-aliases
