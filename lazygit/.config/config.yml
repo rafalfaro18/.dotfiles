@@ -1,0 +1,4 @@
+gui:
+  showIcons: true
+  nerdFontsVersion: "3" # Use "2" if you have an older font version installed
+
