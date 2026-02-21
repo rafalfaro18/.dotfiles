@@ -62,7 +62,7 @@ s = stop
 # -------------------------
 
 o = goto            # (doesn't work) open URL (focus location bar)
-f = find            # find in page
+f = find            # (doesn't work) find in page
 B = bookmarks
 
 # -------------------------
