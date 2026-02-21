@@ -1,92 +1,97 @@
-# ==============================
-# Vimium-like key bindings
-# ==============================
+# ------------------------------------------------------------
+# Dillo keysrc – Vimium/Vim-style bindings
+# ------------------------------------------------------------
 
-# ------------------------------
-# Scrolling (Vim-style)
-# ------------------------------
+# -------------------------
+# Navigation (Vim-style)
+# -------------------------
 
+# h/j/k/l movement
+h = left
 j = line-down
 k = line-up
-h = left
 l = right
 
-# Half page
-d = page-down
-u = page-up
+# Page scrolling
+d = screen-down        # (doesn't work) like Vimium half-page down
+u = screen-up          # (doesn't work) like Vimium half-page up
 
-# Full page
-f = page-down
-b = page-up
+# Full page scrolling
+#Space = screen-down
+#ShiftSpace = screen-up # (doesn't work) 
 
-# Top / Bottom
-g = home
-G = end
+# Top / Bottom (like gg / G)
+g = top
+G = bottom 
 
-# Space scroll (Vimium behavior)
-Space = page-down
-<shift>Space = page-up
+# Also keep Home/End behavior
+Home = top
+End = bottom
 
-# ------------------------------
+# -------------------------
 # History navigation
-# ------------------------------
+# -------------------------
 
 H = back
 L = forward
 
-# Reload
-r = reload
-R = reload
-
-# Stop loading
-x = stop
-
-# ------------------------------
-# URL / Navigation
-# ------------------------------
-
-o = open
-O = open-new
-
-# Home page
-gh = home-page
-
-# ------------------------------
-# Find in page
-# ------------------------------
-
-/ = find
-n = find-next
-N = find-prev
-
-# ------------------------------
-# Zoom (like Vimium)
-# ------------------------------
-
-+ = zoom-in
-= = zoom-in
-- = zoom-out
-0 = zoom-reset
-
-# ------------------------------
-# Tabs (if Dillo compiled with tabs)
-# ------------------------------
+# -------------------------
+# Tabs (Vimium-like)
+# -------------------------
 
 t = new-tab
-<ctrl>w = close-tab
-<ctrl>Tab = right-tab
-<ctrl><shift>Tab = left-tab
+x = close-tab
+X = close-all
 
-# ------------------------------
-# Window control
-# ------------------------------
+J = right-tab
+K = left-tab
 
-q = close
-<ctrl>q = close-all
+# Alt+number still works by default for focus-tabN
+# (leaving defaults intact)
 
-# ------------------------------
+# -------------------------
+# Reload / Stop
+# -------------------------
+
+r = reload
+R = reload 
+s = stop
+
+# -------------------------
+# Location / Search
+# -------------------------
+
+o = goto            # (doesn't work) open URL (focus location bar)
+f = find            # find in page
+b = bookmarks
+
+# -------------------------
+# Zoom
+# -------------------------
+
+zi = zoom-in
+zo = zoom-out
+z0 = zoom-reset
+
+# (Since multi-key sequences are not supported,
+# these are approximated below:)
+
+#i = zoom-in
+#o = zoom-out
+#0 = zoom-reset
+
+# -------------------------
 # Misc
-# ------------------------------
+# -------------------------
 
-s = save
-S = save-as
+Escape = hide-panels
+y = copy
+p = websearch
+
+# -------------------------
+# Optional: disable arrow keys (force hjkl usage)
+# -------------------------
+# Up = nop
+# Down = nop
+# Left = nop
+# Right = nop
