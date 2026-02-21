@@ -1,0 +1,11 @@
+# "close-all" closes all tabs/windows and exits.
+<ctrl>q = close-all
+
+# "left-tab" and "right-tab" switch to the left/right of the current tab.
+<ctrl><shift>tab = left-tab
+
+# Use HJKL to move around
+k = line-up
+j = line-down
+h = left
+l = right
