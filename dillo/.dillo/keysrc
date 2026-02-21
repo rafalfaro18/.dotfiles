@@ -13,8 +13,8 @@ k = line-up
 l = right
 
 # Page scrolling
-d = screen-down        # (doesn't work) like Vimium half-page down
-u = screen-up          # (doesn't work) like Vimium half-page up
+Space = screen-down        # (d doesn't work) like Vimium half-page down
+b = screen-up          # (u doesn't work) like Vimium half-page up
 
 # Full page scrolling
 #Space = screen-down
@@ -62,8 +62,8 @@ s = stop
 # -------------------------
 
 o = goto            # (doesn't work) open URL (focus location bar)
-f = find            # find in page
-b = bookmarks
+f = find            # (doesn't work) find in page
+B = bookmarks
 
 # -------------------------
 # Zoom
