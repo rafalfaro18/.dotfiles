@@ -1,5 +1,12 @@
 # My .Dotfiles
 
+## Notes
+
+- If on Wayland (i.e CachyOS with KDE Plasma) install wl-clipboard for clipboard syncing between OS, tmux, and NeoVim:
+```sh
+sudo pacman -S wl-clipboard
+```
+
 ## Instructions
 
 - Set these environment variables if not present in Linux, MacOS and Windows devices using this project.
