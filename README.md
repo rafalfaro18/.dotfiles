@@ -6,6 +6,8 @@
 ```sh
 sudo pacman -S wl-clipboard
 ```
+- If on termux install nerd font by renaming the .otf or .ttf file to ~/.termux/font.ttf (it must be .ttf) and then run ``termux-reload-settings
+``
 
 ## Instructions
 
