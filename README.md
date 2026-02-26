@@ -26,6 +26,12 @@ XDG_CACHE_HOME=~/.cache
 
 Run ``:mksession!`` it creates a Session.vim file that Tmux Resurrect automatically applies to vim and neovim restored executions. 
 
+## Start Neovim in specific Session
+
+```sh
+nvim -S Session.vim
+```
+
 ## Tmux
 
 ### Save Session
