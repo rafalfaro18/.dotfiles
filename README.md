@@ -20,9 +20,23 @@ XDG_CACHE_HOME=~/.cache
 - Install stow
 - stow ``name_of_the_app``
 
+## NeoVim & Vim
+
+## Overwrite Session
+
+Run ``:mksession!`` it creates a Session.vim file that Tmux Resurrect automatically applies to vim and neovim restored executions. 
+
 ## Tmux
 
+### Save Session
+
+``Prefix Prefix-s`` . Sessions get saved to ``~/.tmux/resurrect/`` and can be copied and renamed to whatever.txt
+
 ### Resurrect Sessions
+
+### Last Session
+
+``Prefix Prefix-r``
 
 #### Selec a session to resurrect
 
