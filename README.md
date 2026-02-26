@@ -19,3 +19,14 @@ XDG_CACHE_HOME=~/.cache
 ```
 - Install stow
 - stow ``name_of_the_app``
+
+## Tmux
+
+### Resurrect Sessions
+
+#### Selec a session to resurrect
+
+```sh
+pkill tmux
+tmux new-session -d && FILE=$(/usr/bin/ls ~/.tmux/resurrect/*.txt | fzf) tmux run-shell "~/.tmux/plugins/tmux-resurrect/scripts/restore.sh $FILE" && tmux attach
+```
