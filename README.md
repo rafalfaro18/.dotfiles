@@ -29,7 +29,8 @@ Run ``:mksession!`` it creates a Session.vim file that Tmux Resurrect automatica
 ## Start Neovim in specific Session
 
 ```sh
-nvim -S Session.vim
+# use absolute path for resurrect compatibility
+nvim -S ./Session.vim
 ```
 
 ## Tmux
