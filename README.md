@@ -36,13 +36,13 @@ nvim -S Session.vim
 
 ### Save Session
 
-``Prefix Prefix-s`` . Sessions get saved to ``~/.tmux/resurrect/`` and can be copied and renamed to whatever.txt
+``Prefix Ctrl-s`` . Sessions get saved to ``~/.tmux/resurrect/`` and can be copied and renamed to whatever.txt
 
 ### Resurrect Sessions
 
 ### Last Session
 
-``Prefix Prefix-r``
+``Prefix Ctrl-r`` . Defaults to opening session called ``last`` which is a symlink to the latest *.txt file.
 
 #### Selec a session to resurrect
 
