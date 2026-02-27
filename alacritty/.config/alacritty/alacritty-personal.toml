@@ -21,6 +21,7 @@ cyan = "0x88C0D0"
 white = "0xE5E9F0"
 
 [colors]
+selection = { text = "0xD8DEE9", background = "0x2E3440" }
 draw_bold_text_with_bright_colors = true
 transparent_background_colors = true
 
