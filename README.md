@@ -17,6 +17,10 @@ XDG_CONFIG_HOME=~/.config
 XDG_DATA_HOME=~/.local/share
 XDG_CACHE_HOME=~/.cache
 ```
+- ``git clone https://github.com/rafalfaro18/.dotfiles.git ~/.dotfiles``
+- ``cd ~/.dotfiles``
+- ``git submodule init``
+- ``git submodule update``
 - Install stow
 - stow ``name_of_the_app``
 
