@@ -1,4 +1,5 @@
-# neovim swap files
+# NeoVim
+**/Session.vim
 *.swp
 *.swo
 *.swn
