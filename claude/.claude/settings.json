@@ -5,7 +5,12 @@
       "Read(./.env.*)",
       "Read(./secrets/**)",
       "Read(./config/credentials.json)",
-      "Read(./build)"
+      "Read(./build)",
+      "Read(./dist)",
+      "Read(./.cache)",
+      "Read(./venv/**)",
+      "Read(./.venv/**)",
+      "Read(./node_modules/**)"
     ]
   },
   "theme": "dark",
