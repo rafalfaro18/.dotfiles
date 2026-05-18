@@ -10,7 +10,11 @@
       "Read(./.cache)",
       "Read(./venv/**)",
       "Read(./.venv/**)",
-      "Read(./node_modules/**)"
+      "Read(./node_modules/**)",
+      "Read(./__pycache__)",
+      "Read(./.next)",
+      "Read(./.DS_Store)",
+      "Read(./coverage)"
     ]
   },
   "theme": "dark",
