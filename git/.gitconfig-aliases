@@ -4,6 +4,9 @@
     st = status
     br = branch
 
+[core]
+excludesfile = ~/.gitignore_global
+
 # Add this to ~/.gitconfig and uncomment to import this file
 # [include]
 #    path = ~/.gitconfig-aliases
