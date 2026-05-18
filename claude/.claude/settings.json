@@ -15,6 +15,9 @@
       "Read(./.next)",
       "Read(./.DS_Store)",
       "Read(./coverage)"
+    ],
+    "allow": [
+      "Read(./.env.example)"
     ]
   },
   "theme": "dark",
