@@ -1,7 +1,4 @@
 {
-  "theme": "dark",
-  "editorMode": "vim",
-  "tui": "fullscreen",
   "permissions": {
     "deny": [
       "Read(./.env)",
@@ -10,5 +7,8 @@
       "Read(./config/credentials.json)",
       "Read(./build)"
     ]
-  }
+  },
+  "theme": "dark",
+  "editorMode": "vim",
+  "tui": "fullscreen"
 }
