@@ -22,5 +22,8 @@
   },
   "tui": "fullscreen",
   "theme": "dark",
-  "editorMode": "vim"
+  "editorMode": "vim",
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
+  }
 }
