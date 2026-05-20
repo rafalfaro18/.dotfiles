@@ -26,5 +26,10 @@
   "tui": "fullscreen",
   "theme": "dark",
   "editorMode": "vim",
-  "effortLevel": "medium"
+  "effortLevel": "medium",
+  "statusLine": {
+    "type": "command",
+    "command": "oh-my-posh claude",
+    "padding": 0
+  }
 }
