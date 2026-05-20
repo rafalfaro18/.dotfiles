@@ -1,3 +1,5 @@
 set -o vi
 
 export PATH=$PATH:$HOME/.local/bin
+
+eval "$(oh-my-posh init bash)"
