@@ -20,10 +20,11 @@
       "Read(./coverage)"
     ]
   },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
+  },
   "tui": "fullscreen",
   "theme": "dark",
   "editorMode": "vim",
-  "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true
-  }
+  "effortLevel": "medium"
 }
