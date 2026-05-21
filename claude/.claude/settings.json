@@ -20,7 +20,7 @@
       "Read(./coverage)"
     ]
   },
-  "model": "sonnet",
+  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "node ~/.claude/statusline.js",
