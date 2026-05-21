@@ -22,7 +22,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "oh-my-posh claude",
+    "command": "node ~/.claude/statusline.js",
     "padding": 0
   },
   "enabledPlugins": {
