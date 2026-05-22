@@ -29,7 +29,6 @@
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true
   },
-  "effortLevel": "medium",
   "tui": "fullscreen",
   "theme": "dark",
   "editorMode": "vim"
