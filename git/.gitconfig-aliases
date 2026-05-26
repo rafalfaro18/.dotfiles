@@ -3,6 +3,13 @@
     ci = commit
     st = status
     br = branch
+    sm = submodule
+    # initialize and update all nested submodules at once
+    sup = !git submodule update --init --recursive
+    # git sfe 'git pull' to run a command across every submodule
+    sfe = submodule foreach
+    # quickly add a new submodule
+    sadd = !git submodule add
 
 [core]
 excludesfile = ~/.gitignore_global
