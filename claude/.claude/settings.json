@@ -17,7 +17,8 @@
       "Read(./__pycache__)",
       "Read(./.next)",
       "Read(./.DS_Store)",
-      "Read(./coverage)"
+      "Read(./coverage)",
+      "Read(**/Session.vim)"
     ]
   },
   "model": "opusplan",
