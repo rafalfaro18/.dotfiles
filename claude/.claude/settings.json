@@ -18,7 +18,9 @@
       "Read(./.next)",
       "Read(./.DS_Store)",
       "Read(./coverage)",
-      "Read(**/Session.vim)"
+      "Read(**/Session.vim)",
+      "Bash(npx drizzle-kit migrate)",
+      "Bash(drizzle-kit migrate)"
     ]
   },
   "model": "opusplan",
