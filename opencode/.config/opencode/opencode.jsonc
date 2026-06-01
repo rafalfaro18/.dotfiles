@@ -4,6 +4,9 @@
     "websearch": "deny"
   },
   "lsp": true,
+  "watcher": {
+    "ignore": ["node_modules/**", "dist/**", ".git/**", ".venv/**"]
+  },
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
