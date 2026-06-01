@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://json.schemastore.org/lazydocker.json
+gui:
+  theme:
+    activeBorderColor:
+      - "#7aa2f7" # Tokyo Night Blue
+      - "bold"
+    inactiveBorderColor:
+      - "#414868" # Dark Gray / Line color
+    optionsTextColor:
+      - "#e0af68" # Yellow / Orange accent
+    selectedLineBgColor:
+      - "#2e3c64" # Highlighted line background
+    selectedRangeBgColor:
+      - "#2e3c64"
+    cherryPickedCommitFgColor:
+      - "#9ece6a" # Green
+    cherryPickedCommitBgColor:
+      - "#2e3c64"
+    markedBaseCommitFgColor:
+      - "#bb9af7" # Purple
+    markedBaseCommitBgColor:
+      - "#2e3c64"
+    unstagedChangesColor:
+      - "#f7768e" # Red
