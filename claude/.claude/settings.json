@@ -34,6 +34,6 @@
     "typescript-lsp@claude-plugins-official": true
   },
   "tui": "fullscreen",
-  "theme": "dark",
+  "theme": "custom:tokyo-night",
   "editorMode": "vim"
 }
