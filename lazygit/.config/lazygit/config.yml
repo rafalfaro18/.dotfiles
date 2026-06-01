@@ -3,7 +3,6 @@ gui:
   showIcons: true
   nerdFontsVersion: "3" # Use "2" if you have an older font version installed
   theme:
-    lightTheme: false
     activeBorderColor:
       - "#7aa2f7"
       - bold
