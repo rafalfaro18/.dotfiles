@@ -2,4 +2,7 @@ set -o vi
 
 export PATH=$PATH:$HOME/.local/bin
 
+# for opencode /editor comman
+export EDITOR=nvim
+
 eval "$(oh-my-posh init bash --config tokyonight_storm)"
