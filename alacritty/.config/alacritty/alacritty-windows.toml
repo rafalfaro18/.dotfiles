@@ -1,0 +1,12 @@
+[general]
+import = [
+    "~/.config/alacritty/alacritty-personal.toml",
+]
+
+# Maximized causes non-stop Windows Bell when you type
+[window]
+startup_mode = "Windowed"
+
+[terminal.shell]
+program = "wsl.exe"
+args = ["~"]
