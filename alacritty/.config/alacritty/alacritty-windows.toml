@@ -1,3 +1,5 @@
+# Do not import this file in Linux
+# In Windows import ONLY this one instead of importing alacritty-personal.toml
 [general]
 import = [
     "~/.config/alacritty/alacritty-personal.toml",
