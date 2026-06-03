@@ -20,9 +20,9 @@
       "Read(./coverage)",
       "Read(**/Session.vim)",
       "Bash(npx drizzle-kit migrate)",
-      "Bash(drizzle-kit migrate)",
-      "WebSearch"
-    ]
+      "Bash(drizzle-kit migrate)"
+    ],
+    "ask": ["WebSearch"]
   },
   "model": "opusplan",
   "statusLine": {
