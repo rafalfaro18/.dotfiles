@@ -3,3 +3,4 @@
 
 fish_vi_key_bindings
 
+source ~/.config/fish/personal.fish
