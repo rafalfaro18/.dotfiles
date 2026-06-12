@@ -22,7 +22,9 @@
       "Bash(npx drizzle-kit migrate)",
       "Bash(drizzle-kit migrate)"
     ],
-    "ask": ["WebSearch"]
+    "ask": [
+      "WebSearch"
+    ]
   },
   "model": "opusplan",
   "statusLine": {
