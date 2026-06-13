@@ -1,56 +1,47 @@
 param (
-    [Parameter(Position = 0, Mandatory = $true, ValueFromRemainingArguments = $true)]
-    [string[]]$Packages,
+    [Parameter(Position = 0, Mandatory = $true, ValueFromRemainingArguments = $true)]
+    [string[]] $Packages,
 
-    [string]$Dir = ".",     # Corresponds to stow -d
-    [string]$Target = $HOME # Corresponds to stow -t
+    [string] $Dir   = ".",        # stow -d
+    [string] $Target = $HOME      # stow -t
 )
 
-# Helper function to process the directory tree exactly like Stow
 function Stow-Node {
-    param ($SourceNode, $TargetNode)
+    param (
+        [Parameter(Mandatory)] [string] $SourceNode,
+        [Parameter(Mandatory)] [string] $TargetNode
+    )
+    $items = & "C:\Program Files\coreutils\bin\ls.exe" -A "$SourceNode"
+    foreach ($item in $items) {
+        $srcItem  = Join-Path $SourceNode $item
+        $linkPath = Join-Path $TargetNode $item
 
-    # Coreutils equivalent: list all directory items (including hidden files)
-    $items = &"C:\Program Files\coreutils\bin\ls.exe" -A $SourceNode
+        $srcIsDir = (Get-Item $srcItem).PSIsContainer
 
-    foreach ($item in $items) {
-        $srcItem = Join-Path $SourceNode $item
-        $tgtItem = Join-Path $TargetNode $item
+        if (Test-Path $linkPath) {
+            Write-Host "CONFLICT: $linkPath already existor Red
+            continue
+        }
 
-        $srcIsDir = (Get-Item $srcItem).Attributes.HasFlag([System.IO.FileAttributes]::Directory)
-        $tgtExists = Test-Path $tgtItem
-
-        if ($tgtExists) {
-            $tgtIsDir = (Get-Item $tgtItem).Attributes.HasFlag([System.IO.FileAttributes]::Directory)
-            $tgtIsLink = (Get-Item $tgtItem).Attributes.HasFlag([System.IO.FileAttributes]::ReparsePoint)
-
-            # Scenario A: Target directory exists and is a real folder -> Recurse inside it
-            if ($srcIsDir -and $tgtIsDir -and -not $tgtIsLink) {
-                Stow-Node -SourceNode $srcItem -TargetNode $tgtItem
-            }
-            # Scenario B: Target exists but is a symlink or conflicts with a file -> Skip/Conflict
-            else {
-                Write-Host "CONFLICT: $tgtItem already exists. Skipping." -ForegroundColor Red
-            }
-        }
-        else {
-            # Scenario C: Target does NOT exist. Create a symlink here.
-            &"C:\Program Files\coreutils\bin\ln.exe" -s $srcItem $TargetNode
-            Write-Host "Linked: $tgtItem -> $srcItem" -ForegroundColor Green
-        }
-    }
+        if ($srcIsDir) {
+            & "C:\Program Files\coreutils\bin\mkdir.exe"
+            Write-Host "Created folder: $linkPath" -Foreg
+            Stow-Node -SourceNode $srcItem -TargetNode $l
+        }
+        else {
+            & "C:\Program Files\coreutils\bin\ln.exe" -s
+            Write-Host "Linked: $linkPath -> $srcItem" -F
+        }
+    }
 }
 
-# Iterate through every package passed to the command
 foreach ($Package in $Packages) {
-    $PackagePath = Resolve-Path (Join-Path $Dir $Package) -ErrorAction SilentlyContinue
-    $TargetPath = Resolve-Path $Target
+    $PackagePath = Resolve-Path (Join-Path $Dir $Package)e
+    if (-not $PackagePath) {
+        Write-Warning "Package directory '$Package' does ."
+        continue
+    }
 
-    if (-not $PackagePath) {
-        Write-Warning "Package directory '$Package' does not exist in '$Dir'. Skipping."
-        continue
-    }
-
-    Write-Host "Stowing package: $Package" -ForegroundColor Cyan
-    Stow-Node -SourceNode $PackagePath -TargetNode $TargetPath
+    Write-Host "Stowing package: $Package" -ForegroundCol
+    Stow-Node -SourceNode $PackagePath -TargetNode $Targe
 }
