@@ -14,6 +14,7 @@ sudo pacman -S wl-clipboard
 ### Windows
 
 - Coreutils: ``winget install Microsoft.Coreutils``
+- Powershell 7: ``winget install --id Microsoft.PowerShell``
 
 ## Instructions
 
