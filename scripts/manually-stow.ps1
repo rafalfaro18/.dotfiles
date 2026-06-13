@@ -13,5 +13,5 @@
 & "C:\Program Files\coreutils\bin\ln.exe" -s C:\Users\your_user\.dotfiles\git\.gitconfig-aliases C:\Users\your_user\.gitconfig-aliases
 & "C:\Program Files\coreutils\bin\ln.exe" -s C:\Users\your_user\.dotfiles\git\.gitignore_global C:\Users\your_user\.gitignore_global
 
-# Manually stow PowerShell, ensure Documents\PowerShell folder exists first
+# Manually stow PowerShell, ensure Documents\PowerShell folder exists first. Ensure Powershell 7 is installed, location is different por PS 5.
  & "C:\Program Files\coreutils\bin\ln.exe" -s C:\Users\your_user\.dotfiles\powershell\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 C:\Users\your_user\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
