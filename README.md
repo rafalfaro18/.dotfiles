@@ -9,6 +9,12 @@ sudo pacman -S wl-clipboard
 - If on termux install nerd font by renaming the .otf or .ttf file to ~/.termux/font.ttf (it must be .ttf) and then run ``termux-reload-settings
 ``
 
+## Requirements
+
+### Windows
+
+- Coreutils: ``winget install Microsoft.Coreutils``
+
 ## Instructions
 
 - Set these environment variables if not present in Linux, MacOS and Windows devices using this project.
