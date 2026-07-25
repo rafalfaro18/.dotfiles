@@ -2,9 +2,9 @@
 
 ## Notes
 
-- I use this setting for keyboard repeat delay and repeat rate:
+- I use this setting for keyboard repeat delay and repeat rate (it really makes a difference when navigating with hjkl like in Neovim/Neo-tree):
 ```sh
-# I  set this in a number of diferent ways, in CachyOS I use the OS GUI Settings instead
+# I set this in a number of diferent ways, in CachyOS I use the OS GUI Settings instead
 xset r rate 250 40
 ```
 - If on Wayland (i.e CachyOS with KDE Plasma) install wl-clipboard for clipboard syncing between OS, tmux, and NeoVim:
