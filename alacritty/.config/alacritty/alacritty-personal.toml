@@ -4,7 +4,7 @@ startup_mode = "Maximized"
 
 [font]
 size = 13
-normal = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Regular" }
+normal = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Regular" } # NL = No Ligatures
 #normal = { family = "OpenDyslexicM Nerd Font Mono", style = "Regular" }
 
 [colors.primary]
