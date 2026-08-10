@@ -1,0 +1,7 @@
+font-family = "JetBrainsMonoNL Nerd Font Mono"
+font-size = 13
+theme = "TokyoNight Night"
+background-image = ~/Pictures/wallhaven-vgyyxl.png
+background-image-opacity = 0.2
+maximize = true
+window-theme = dark
