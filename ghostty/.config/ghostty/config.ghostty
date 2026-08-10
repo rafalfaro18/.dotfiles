@@ -6,3 +6,4 @@ background-image-opacity = 0.2
 maximize = true
 window-theme = dark
 window-decoration = false
+custom-shader = ~/.config/ghostty/shaders/cursor_tail.glsl
