@@ -4,7 +4,7 @@ local config = {}
 config.font = wezterm.font 'JetBrainsMonoNL Nerd Font Mono'
 config.font_size = 13
 config.color_scheme = "tokyonight_night"
-config.window_background_image = 'Pictures/wallhaven-vgyyxl.png'
+config.window_background_image = wezterm.home_dir .. '/Pictures/wallhaven-vgyyxl.png'
 
 config.window_background_image_hsb = {
   -- Darken the background image by reducing it to 1/3rd
