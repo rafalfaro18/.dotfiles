@@ -3,7 +3,7 @@ local config = {}
 
 config.font = wezterm.font 'JetBrainsMonoNL Nerd Font Mono'
 config.font_size = 13
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "tokyonight_night"
 config.window_background_image = 'Pictures/wallhaven-vgyyxl.png'
 
 config.window_background_image_hsb = {
@@ -17,5 +17,8 @@ config.window_background_image_hsb = {
   -- You can adjust the saturation also.
   saturation = 1.0,
 }
+
+config.hide_tab_bar_if_only_one_tab = true
+config.window_decorations = "NONE"
 
 return config
