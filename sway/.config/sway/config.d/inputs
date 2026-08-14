@@ -1,0 +1,5 @@
+### Inputs configuration
+input * {
+    xkb_layout "us"
+    xkb_variant ""
+}
