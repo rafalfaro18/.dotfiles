@@ -139,6 +139,6 @@ bar {
     }
 }
 
-exec feh --bg-fill ~/Pictures/wallhaven-vgyyxl.png
+exec swaybg -i ~/Pictures/wallhaven-vgyyxl.png -m fill
 
 include ~/.config/sway/config.d/*
