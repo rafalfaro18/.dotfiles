@@ -4,3 +4,6 @@
 [submodule "nvim-testing/.config/nvim-testing"]
 	path = nvim-testing/.config/nvim-testing
 	url = https://github.com/rafalfaro18/nvim-testing.git
+[submodule "rofi/.config/rofi"]
+	path = rofi/.config/rofi
+	url = https://github.com/w8ste/Tokyonight-rofi-theme.git
