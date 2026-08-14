@@ -136,7 +136,8 @@ client.background       #ffffff
 ########################################################################
 ########################################################################
 
-exec --no-startup-id "i3-msg 'workspace 1; exec wezterm'"
+# this causes workspace 1 to not load the name until I close all the windows that were in it and switch to another workspace
+#exec --no-startup-id "i3-msg 'workspace 1; exec wezterm'"
 
 ########################################################################
 ########################################################################
@@ -203,7 +204,8 @@ exec xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --scale 1x1
 exec xrandr --output DP-2 --mode 2880x1800 --rate 59.99 --scale 0.7x0.7
 #exec xrandr --auto --output HDMI-1 --mode 1920x1080 --above HDMI-2
 
-exec feh --bg-fill ~/.config/i3/wallpaper.png
+#exec feh --bg-fill ~/.config/i3/wallpaper.png
+exec feh --bg-fill ~/Pictures/wallhaven-vgyyxl.png
 
 exec --no-startup-id dunst
 exec --no-startup-id picom
