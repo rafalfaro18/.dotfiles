@@ -14,7 +14,7 @@ sudo pacman -S wl-clipboard
 - If on termux install nerd font by renaming the .otf or .ttf file to ~/.termux/font.ttf (it must be .ttf) and then run ``termux-reload-settings
 ``
 - My i3 config comes from CachyOS KDE Plasma and then I followed the CachyOS wiki to install i3wm.
-- My Sway config comes from I had raspbian installed in Raspberry Pi 5 with desktop environment running wayland and I followed [this cuide](https://docs.beescreens.ch/tutorials/install-and-configure-a-raspberry-pi/chapter-6-install-and-configure-sway/) to install Sway. 
+- My Sway config comes from I had raspbian installed in Raspberry Pi 5 with desktop environment running wayland and I followed [this guide](https://docs.beescreens.ch/tutorials/install-and-configure-a-raspberry-pi/chapter-6-install-and-configure-sway/) to install Sway. 
 
 ## Requirements
 
