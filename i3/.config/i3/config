@@ -218,3 +218,5 @@ exec_always mkfifo /tmp/xobpipe && tail -f /tmp/xobpipe | xob -t 2170 & disown
 exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id xset r rate 250 40
 exec_always --no-startup-id neru launch
+
+include ~/.config/i3/config.d/*.conf
