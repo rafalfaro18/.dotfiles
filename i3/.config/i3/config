@@ -130,6 +130,7 @@ set $bg_storm      #24283b
 set $fg            #a9b1d6
 set $neon_blue     #7aa2f7
 set $neon_purple   #bb9af7
+set $neon_red      #f7768e
 set $comment       #565f89
 
 # class                 border        backgr.       text          indicator     child_border
