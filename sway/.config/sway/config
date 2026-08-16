@@ -6,7 +6,7 @@ set $mod Mod4
 # Your preferred application launcher
 set $menu dmenu_path | wofi | xargs swaymsg exec --
 # Font family and size
-font 'JetbrainsMonoNL Nerd Font Mono' 12
+font 'JetBrainsMonoNL Nerd Font Mono' 12
 
 include /etc/sway/config-vars.d/*
 
