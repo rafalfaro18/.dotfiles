@@ -137,6 +137,23 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Tokyo Night Color Scheme for sway
+set $bg_dark       #1a1b26
+set $bg_storm      #24283b
+set $fg            #a9b1d6
+set $neon_blue     #7aa2f7
+set $neon_purple   #bb9af7
+set $neon_red      #f7768e
+set $comment       #565f89
+
+# class                 border        backgr.       text          indicator     child_border
+client.focused          $neon_blue    $bg_storm     $neon_purple  $neon_blue    $neon_blue
+client.focused_inactive $bg_dark      $bg_dark      $fg           $bg_dark      $bg_dark
+client.unfocused        $bg_dark      $bg_dark      $comment      $bg_dark      $bg_dark
+client.urgent           $neon_red     $bg_dark      $neon_red     $neon_red     $neon_red
+client.placeholder      $bg_dark      $bg_dark      $fg           $bg_dark      $bg_dark
+client.background       $bg_dark
+
 #
 # Status Bar:
 #
@@ -149,9 +166,15 @@ bar {
     status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        background         $bg_dark
+        statusline         $fg
+        separator          $comment
+
+        # class             border         background    text
+        focused_workspace   $neon_blue     $bg_storm     $neon_purple
+        active_workspace    $bg_storm      $bg_storm     $fg
+        inactive_workspace  $bg_dark       $bg_dark      $comment
+        urgent_workspace    $neon_red      $bg_dark      $neon_red
     }
 }
 

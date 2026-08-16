@@ -17,13 +17,17 @@
 ;==========================================================
 
 [colors]
-background = #BCC3C3
-background-alt = #002B36
-foreground = #002B36
-foreground-alt = #BCC3C3
-primary = #ffb52a
-secondary = #e60053
-alert = #FF0000
+; Tokyo Night Theme Palette
+background = #1a1b26
+background-alt = #24283b
+foreground = #a9b1d6
+foreground-alt = #565f89
+
+; Accent Colors
+primary = #7aa2f7
+secondary = #bb9af7
+alert = #f7768e
+separator = #565f89
 
 [bar/example]
 monitor = ${env:MONITOR:}
@@ -35,15 +39,16 @@ top = yes
 bottom = no
 override-redirect = false
 
-foreground = ${colors.foreground-alt}
-background = ${colors.background-alt}
+; Flipped to ensure the deep background displays correctly
+foreground = ${colors.foreground}
+background = ${colors.background}
 
 ; Under-/overline pixel size and argb color
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-line-size = 1
-line-color = #dfdfdf
+line-size = 2
+line-color = ${colors.primary}
 
 border-top-size = 0
 border-bottom-size = 0
@@ -68,12 +73,12 @@ modules-left = i3 sp2 info-hackspeed sp2
 modules-right = weather sp1 linux-ver sp1 updates sp2 date sp2
 
 tray-position = right
-tray-padding = 0
+tray-padding = 2
 tray-detached = false
 tray-maxsize = 14
 tray-scale = 1.0
 tray-background = ${colors.background-alt}
-tray-foreground = ${colors.foreground-alt}
+tray-foreground = ${colors.foreground}
 tray-offset-x = 0
 tray-offset-y = 0
 
@@ -87,14 +92,14 @@ cursor-click = pointer
 [module/sp1]
 type = custom/text
 content = " | "
-content-foreground = #93A1A1
-content-background = ${colors.background-alt}
+content-foreground = ${colors.separator}
+content-background = ${colors.background}
 
 [module/sp2]
 type = custom/text
 content = " |"
-content-foreground = #93A1A1
-content-background = ${colors.background-alt}
+content-foreground = ${colors.separator}
+content-background = ${colors.background}
 
 [module/i3]
 type = internal/i3
@@ -107,32 +112,33 @@ enable-scroll = false
 
 label-mode = %mode%
 label-mode-padding = 1
-label-mode-foreground = ${colors.foreground-alt}
+label-mode-foreground = ${colors.foreground}
 label-mode-background = ${colors.background-alt}
 
 ; focused = Active workspace on focused monitor
+; Text lights up in bright neon purple on a storm-blue block
 label-focused = %name%
-label-focused-foreground = ${colors.foreground}
-label-focused-background = ${colors.background}
-label-focused-underline = ${colors.foreground-alt}
+label-focused-foreground = ${colors.secondary}
+label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.primary}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
 label-unfocused-padding = ${self.label-focused-padding}
 label-unfocused-foreground = ${colors.foreground-alt}
-label-unfocused-background = ${colors.background-alt}
+label-unfocused-background = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-label-visible-foreground = ${self.label-focused-background}
-label-visible-background = ${self.label-focused-foreground}
-label-visible-underline = ${self.label-focused-underline}
+label-visible-foreground = ${colors.foreground}
+label-visible-background = ${colors.background}
+label-visible-underline = ${colors.foreground-alt}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
-label-urgent-foreground = ${colors.foreground}
+label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
@@ -169,12 +175,12 @@ interval = 1
 time = "%a %d %I:%M %P"
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.background}
 
 label = %time%
-label-foreground = ${colors.foreground-alt}
-label-background = ${colors.background-alt}
+label-foreground = ${colors.foreground}
+label-background = ${colors.background}
 
 [module/volume]
 type = internal/alsa
@@ -198,40 +204,39 @@ master-mixer = Master
 
 format-volume = "<label-volume><bar-volume>"
 label-volume = " "
-label-volume-foreground = ${colors.foreground-alt}
-label-volume-background = ${colors.background-alt}
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.background}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
-format-muted-background = ${colors.background-alt}
+format-muted-background = ${colors.background}
 label-muted = MUTED
 
 bar-volume-width = 5
-bar-volume-foreground-0 = ${colors.foreground-alt}
-bar-volume-foreground-1 = ${colors.foreground-alt}
-bar-volume-foreground-2 = ${colors.foreground-alt}
-bar-volume-foreground-3 = ${colors.foreground-alt}
-bar-volume-foreground-4 = ${colors.foreground-alt}
-bar-volume-foreground-5 = ${colors.foreground-alt}
-bar-volume-foreground-6 = ${colors.foreground-alt}
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary}
+bar-volume-foreground-2 = ${colors.primary}
+bar-volume-foreground-3 = ${colors.primary}
+bar-volume-foreground-4 = ${colors.primary}
+bar-volume-foreground-5 = ${colors.primary}
+bar-volume-foreground-6 = ${colors.primary}
 bar-volume-gradient = false
 bar-volume-indicator = []
 bar-volume-indicator-font = 1
-bar-volume-indicator-foreground = ${colors.foreground-alt}
-bar-volume-indicator-background = ${colors.background-alt}
+bar-volume-indicator-foreground = ${colors.foreground}
+bar-volume-indicator-background = ${colors.background}
 bar-volume-fill = -
 bar-volume-fill-font = 1
-bar-volume-fill-foreground = ${colors.foreground-alt}
-bar-volume-fill-background = ${colors.background-alt}
+bar-volume-fill-foreground = ${colors.primary}
+bar-volume-fill-background = ${colors.background}
 bar-volume-empty = -
 bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.foreground-alt}
-bar-volume-empty-background = ${colors.background-alt}
+bar-volume-empty-background = ${colors.background}
 
 [settings]
 throttle-output = 5
 throttle-output-for = 10
-;throttle-input-for = 30
 screenchange-reload = true
 compositing-background = over
 compositing-foreground = over
