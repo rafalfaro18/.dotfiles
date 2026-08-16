@@ -149,6 +149,11 @@ bar {
     }
 }
 
+# Hide Title Bar
+# none may be too aggressive, might need it when using sway tabs and nesting
+#default_border none
+default_border pixel 2
+
 exec swaybg -i ~/Pictures/wallhaven-vgyyxl.png -m fill
 
 include ~/.config/sway/config.d/*
