@@ -73,7 +73,7 @@ modules-left = i3 sp2 info-hackspeed sp2
 modules-right = weather sp1 linux-ver sp1 updates sp2 date sp2
 
 tray-position = right
-tray-padding = 0
+tray-padding = 2
 tray-detached = false
 tray-maxsize = 14
 tray-scale = 1.0
