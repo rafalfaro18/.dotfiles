@@ -69,3 +69,42 @@ nvim -S ./Session.vim
 pkill tmux
 tmux new-session -d && FILE=$(/usr/bin/ls ~/.tmux/resurrect/*.txt | fzf) tmux run-shell "~/.tmux/plugins/tmux-resurrect/scripts/restore.sh $FILE" && tmux attach
 ```
+
+## Sway
+
+### Streaming Safely
+
+```sh
+# create a sway virtual display, select it in obs
+swaymsg create_output
+# send only the content to be streamed publically to that screen
+# mod+shift+number1-0
+# check info like resolution of the hidden screen
+swaymsg -t get_outputs
+# in obs disable preview, right click enable preview projector - windowed
+# for less latency than the preview, cursor is usable in preview projector
+# it lets me control the hidden window no problem, not tested with games
+# or remote desktop like rustdesk / moonlight
+# mod+workspace1-0 use the ws number displayed in the hidden screen to go to it
+# while controlling that workspace you can simply change it with mod+0
+# workspace 10 is my ? basically a wildcard I can use it for privacy
+# or I have dedicated workspace 9 clearly labeled for private things
+
+# unplug the hidden monitor with
+swaymsg output HEADLESS-1 unplug
+```
+
+### Starting it manually via .profile
+
+```sh
+# Start Sway without login manager
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  # Define variables BEFORE launching the compositor
+  export XDG_CURRENT_DESKTOP=sway:wlroots
+  export XDG_SESSION_DESKTOP=sway
+  export XDG_SESSION_TYPE=wayland
+  export DESKTOP_SESSION=sway
+  
+  exec sway
+fi
+```

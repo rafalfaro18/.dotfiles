@@ -137,6 +137,19 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
+
 # Tokyo Night Color Scheme for sway
 set $bg_dark       #1a1b26
 set $bg_storm      #24283b
@@ -189,5 +202,5 @@ include ~/.config/sway/config.d/*
 
 # Obs screen capture fix + chromium wallet password prompt fix
 # https://wiki.archlinux.org/title/Sway#Screencast_/_WebRTC_not_working
-exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway:wlroots
 exec systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP DESKTOP_SESSION
