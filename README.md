@@ -69,3 +69,20 @@ nvim -S ./Session.vim
 pkill tmux
 tmux new-session -d && FILE=$(/usr/bin/ls ~/.tmux/resurrect/*.txt | fzf) tmux run-shell "~/.tmux/plugins/tmux-resurrect/scripts/restore.sh $FILE" && tmux attach
 ```
+
+## Sway
+
+### Starting it manually via .profile
+
+```sh
+# Start Sway without login manager
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  # Define variables BEFORE launching the compositor
+  export XDG_CURRENT_DESKTOP=sway:wlroots
+  export XDG_SESSION_DESKTOP=sway
+  export XDG_SESSION_TYPE=wayland
+  export DESKTOP_SESSION=sway
+  
+  exec sway
+fi
+```
