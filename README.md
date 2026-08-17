@@ -97,6 +97,8 @@ swaymsg -t get_outputs
 # workspace 10 is my ? basically a wildcard I can use it for privacy
 # or I have dedicated workspace 9 clearly labeled for private things
 
+# I can use OBS Preview Projector to control WS9 from some other WS even if I screen share with some other software that isn't OBS
+
 # unplug the hidden monitor with
 swaymsg output HEADLESS-1 unplug
 ```
