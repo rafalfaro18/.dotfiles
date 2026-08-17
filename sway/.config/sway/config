@@ -4,7 +4,7 @@ set $mod Mod4
 # set $mod Mod1 
 
 # Your preferred application launcher
-set $menu dmenu_path | wofi | xargs swaymsg exec --
+set $menu wofi
 # Font family and size
 font 'JetBrainsMonoNL Nerd Font Mono' 12
 
