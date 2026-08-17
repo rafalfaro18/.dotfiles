@@ -72,6 +72,26 @@ tmux new-session -d && FILE=$(/usr/bin/ls ~/.tmux/resurrect/*.txt | fzf) tmux ru
 
 ## Sway
 
+### Streaming Safely
+
+```sh
+# create a sway virtual display, select it in obs
+swaymsg create_output
+# send only the content to be streamed publically to that screen
+# mod+shift+number1-0
+# check info like resolution of the hidden screen
+swaymsg -t get_outputs
+# in obs disable preview, right click enable preview projector - windowed
+# for less latency than the preview
+# mod+workspace1-0 use the ws number displayed in the hidden screen to go to it
+# while controlling that workspace you can simply change it with mod+0
+# workspace 10 is my ? basically a wildcard I can use it for privacy
+# or I have dedicated workspace 9 clearly labeled for private things
+
+# unplug the hidden monitor with
+swaymsg output HEADLESS-1 unplug
+```
+
 ### Starting it manually via .profile
 
 ```sh
