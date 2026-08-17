@@ -82,7 +82,9 @@ swaymsg create_output
 # check info like resolution of the hidden screen
 swaymsg -t get_outputs
 # in obs disable preview, right click enable preview projector - windowed
-# for less latency than the preview
+# for less latency than the preview, cursor is usable in preview projector
+# it lets me control the hidden window no problem, not tested with games
+# or remote desktop like rustdesk / moonlight
 # mod+workspace1-0 use the ws number displayed in the hidden screen to go to it
 # while controlling that workspace you can simply change it with mod+0
 # workspace 10 is my ? basically a wildcard I can use it for privacy
