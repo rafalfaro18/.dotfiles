@@ -81,9 +81,11 @@ MESA_GL_VERSION_OVERRIDE=3.3 obs
 
 ### Streaming Safely
 
+- Dedicated Streaming Workspace:
 ```sh
-# create a sway virtual display, select it in obs
+# if on a 1 monitor setup: create a sway virtual display, select it in obs
 swaymsg create_output
+# if on a 2 monitor setup simply dedicare one screen for streaming and use Workspace 9 or 10. Skip the rest.
 # send only the content to be streamed publically to that screen
 # mod+shift+number1-0
 # check info like resolution of the hidden screen
@@ -102,6 +104,9 @@ swaymsg -t get_outputs
 # unplug the hidden monitor with
 swaymsg output HEADLESS-1 unplug
 ```
+
+- Optionally Combine with sway scratchpad: Basically set up apps in scratchpad in another monitor first and then whenever ready focus streaming Workspace (headless output or 2nd display) and pull up the scratchap. 
+
 
 ### Starting it manually via .profile
 
