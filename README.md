@@ -122,3 +122,14 @@ if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
 fi
 ```
+## GlazeWM
+
+### Requirements
+
+- PowerToys Run
+- PowerToys Keyboard Manager
+
+### Notes
+
+- Keyboard Manager remaps some shortcuts to feel like Sway. Mainly Runner and Moving / Focusing windows.
+- Needs to be 'stowed'
