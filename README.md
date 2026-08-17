@@ -72,6 +72,13 @@ tmux new-session -d && FILE=$(/usr/bin/ls ~/.tmux/resurrect/*.txt | fzf) tmux ru
 
 ## Sway
 
+## Raspberry Pi
+
+- I have to open obs like this:
+```sh
+MESA_GL_VERSION_OVERRIDE=3.3 obs
+```
+
 ### Streaming Safely
 
 ```sh
