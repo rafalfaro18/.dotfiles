@@ -185,7 +185,9 @@ default_border pixel 2
 
 exec swaybg -i ~/Pictures/wallhaven-vgyyxl.png -m fill
 
-# Obs screen capture fix + chromium wallet password prompt fix
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
 include ~/.config/sway/config.d/*
+
+# Obs screen capture fix + chromium wallet password prompt fix
+# https://wiki.archlinux.org/title/Sway#Screencast_/_WebRTC_not_working
+exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP DESKTOP_SESSION
