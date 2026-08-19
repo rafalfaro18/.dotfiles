@@ -2,5 +2,5 @@ alacritty/.config/alacritty/alacritty.toml
 /dillo/.dillo/bm.txt
 /dillo/.dillo/cookiesrc
 **/Session.vim
-sway/.config/sway/config.d/monitors
+sway/.config/sway/config.d/local*
 i3/.config/i3/config.d/*.local.conf
