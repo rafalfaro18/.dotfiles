@@ -72,6 +72,16 @@ tmux new-session -d && FILE=$(/usr/bin/ls ~/.tmux/resurrect/*.txt | fzf) tmux ru
 
 ## Sway
 
+### Swap Escape and Caps Lock
+
+~/.config/sway/config.d/localinput
+```txt
+input "type:keyboard" {
+    xkb_options caps:swapescape
+}
+
+```
+
 ## Raspberry Pi
 
 - I have to open obs like this:
