@@ -7,3 +7,6 @@
 [submodule "rofi/.config/rofi"]
 	path = rofi/.config/rofi
 	url = https://github.com/w8ste/Tokyonight-rofi-theme.git
+[submodule "suckless/dwl"]
+	path = suckless/dwl
+	url = https://github.com/rafalfaro18/dwl.git
