@@ -12,4 +12,4 @@
 	url = https://github.com/rafalfaro18/dwl.git
 [submodule "suckless/slstatus"]
 	path = suckless/slstatus
-	url = https://git.suckless.org/slstatus
+	url = https://github.com/rafalfaro18/slstatus
