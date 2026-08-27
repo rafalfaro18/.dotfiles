@@ -1,0 +1,26 @@
+[global]
+    # Set the font to JetBrainsMono Nerd Font
+    font = JetBrainsMono Nerd Font 10
+
+    # Optional: Enable Nerd Font icon support
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+
+[urgency_low]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    timeout = 10
+
+[urgency_normal]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    timeout = 15
+
+# Category for critical notifications
+[urgency_critical]
+    background = "#241f31"
+    foreground = "#ff3333"
+    frame_color = "#ff0000"
+    timeout = 0
+
