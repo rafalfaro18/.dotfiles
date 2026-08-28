@@ -5,6 +5,11 @@
       "pack": "glzr-io.starter",
       "widget": "with-glazewm",
       "preset": "default"
+    },
+    {
+      "pack": "starterPatched",
+      "widget": "with-glazewm",
+      "preset": "default"
     }
   ]
 }
