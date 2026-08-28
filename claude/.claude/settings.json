@@ -35,7 +35,12 @@
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true
   },
+  "modelSettings": {
+    "claude-sonnet-4-6": {
+      "effortLevel": "low"
+    }
+  },
   "tui": "fullscreen",
-  "theme": "custom:tokyo-night",
+  "theme": "auto",
   "editorMode": "vim"
 }
