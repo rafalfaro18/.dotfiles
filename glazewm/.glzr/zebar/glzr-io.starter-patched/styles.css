@@ -124,6 +124,7 @@ body,
   border: none;
   border-radius: 2px;
   cursor: pointer;
+  font-size: calc(var(--text-size) + 6px);
 
   &.displayed {
     background: rgb(255 255 255 / 15%);
