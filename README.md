@@ -27,6 +27,7 @@ sudo pacman -S wl-clipboard
 
 - The default profile path for the Current User, Current Host on Windows is ``%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`` for PowerShell 7 and ``%USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`` for Windows PowerShell 5.1 (the default version in Windows 11).
 - Powershell detects it automatically in that path, no need to configure anything so it can find it
+- You can launch powershell 7 running ``pwsh``
 
 ## Instructions
 
