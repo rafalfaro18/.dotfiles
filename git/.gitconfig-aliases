@@ -22,6 +22,9 @@ excludesfile = ~/.gitignore_global
     old = 204
     new = 120
 
+[credential "https://github.com"]
+    useHttpPath = true
+
 # Add this to ~/.gitconfig and uncomment to import this file
 # [include]
 #    path = ~/.gitconfig-aliases
