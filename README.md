@@ -12,7 +12,6 @@ xset r rate 250 40
 sudo pacman -S wl-clipboard
 ```
 - If on termux install nerd font by renaming the .otf or .ttf file to ~/.termux/font.ttf (it must be .ttf) and then run ``termux-reload-settings
-``
 - My i3 config comes from CachyOS KDE Plasma and then I followed the [CachyOS wiki](https://wiki.cachyos.org/configuration/desktop_environments/switch_desktop/) to install i3wm.
 - My Sway config comes from I had raspbian installed in Raspberry Pi 5 with desktop environment running wayland and I followed [this guide](https://docs.beescreens.ch/tutorials/install-and-configure-a-raspberry-pi/chapter-6-install-and-configure-sway/) to install Sway. 
 
@@ -22,6 +21,12 @@ sudo pacman -S wl-clipboard
 
 - Coreutils: ``winget install Microsoft.Coreutils``
 - Powershell 7: ``winget install --id Microsoft.PowerShell``
+
+#### Powershell Symlink
+
+- The default profile path for the Current User, Current Host on Windows is ``%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`` for PowerShell 7 and ``%USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`` for Windows PowerShell 5.1 (the default version in Windows 11).
+- Powershell detects it automatically in that path, no need to configure anything so it can find it
+- You can launch powershell 7 running ``pwsh``
 
 ## Instructions
 
