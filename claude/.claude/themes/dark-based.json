@@ -3,7 +3,7 @@
   "base": "dark",
   "overrides": {
     "background": "rgb(26,27,38)",
-    "bashMessageBackgroundColor": "rgb(38,40,54)",
+    "bashMessageBackgroundColor": "rgb(86,95,137)",
     "briefLabelClaude": "rgb(187,154,247)",
     "briefLabelYou": "rgb(122,162,247)",
     "claude": "rgb(187,154,247)",
@@ -33,7 +33,7 @@
     "success": "rgb(158,206,106)",
     "suggestion": "rgb(125,207,255)",
     "text": "rgb(192,202,245)",
-    "userMessageBackground": "rgb(38,40,54)",
+    "userMessageBackground": "rgb(91,98,145)",
     "userMessageBackgroundHover": "rgb(50,55,75)",
     "warning": "rgb(224,175,104)",
     "warningShimmer": "rgb(240,200,130)"
