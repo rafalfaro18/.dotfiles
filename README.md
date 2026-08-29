@@ -28,6 +28,26 @@ sudo pacman -S wl-clipboard
 - Powershell detects it automatically in that path, no need to configure anything so it can find it
 - You can launch powershell 7 running ``pwsh``
 
+#### Creating Symlinks
+
+**PowerShell** (requires admin or Developer Mode enabled):
+
+The same command works for both a file and a folder:
+
+```powershell
+New-Item -ItemType SymbolicLink -Path "link_path" -Target "target_path"
+```
+
+**CMD** (requires admin or Developer Mode enabled):
+
+```cmd
+REM Symlink to a file
+mklink "link_path" "target_path"
+
+REM Symlink to a folder (the /D flag makes it a directory symlink)
+mklink /D "link_path" "target_path"
+```
+
 ## Instructions
 
 - Set these environment variables if not present in Linux, MacOS and Windows devices using this project.
