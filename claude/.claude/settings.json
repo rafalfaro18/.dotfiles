@@ -36,6 +36,6 @@
     "typescript-lsp@claude-plugins-official": true
   },
   "tui": "fullscreen",
-  "theme": "custom:dark-based",
+  "theme": "dark",
   "editorMode": "vim"
 }
