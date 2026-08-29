@@ -1,6 +1,6 @@
 #!/bin/sh
 #hdmi
-xrandr --output HDMI-0 --mode 1920x1080
+xrandr --output HDMI-0 --mode 2560x1440
 #laptop
 xrandr --output DP-2 --mode 2880x1800 --rate 59.99 --scale 0.67x0.67
 # adjust resolution before wallpaper or it'll distort
