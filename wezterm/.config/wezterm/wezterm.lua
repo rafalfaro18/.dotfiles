@@ -23,7 +23,16 @@ config.hide_tab_bar_if_only_one_tab = true
 config.enable_wayland = false
 
 wezterm.on('bell', function(window, pane)
-  window:toast_notification('Terminal Bell', 'Bell rung in pane ' .. pane:pane_id(), nil, 10000)
+  local title = "Terminal Bell"
+  local proc_name = pane:get_foreground_process_name()
+
+  if proc_name then
+    -- Cleans up the path to just show the executable name (e.g., 'tmux' or 'git')
+    title = "Bell: " .. proc_name:match("([^/\\]+)$")
+  end
+
+  -- Trigger system notification
+  window:toast_notification(title, 'Activity in background pane', nil, 4000)
 end)
 
 return config
