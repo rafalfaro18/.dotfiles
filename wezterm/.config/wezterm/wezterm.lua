@@ -22,4 +22,8 @@ config.hide_tab_bar_if_only_one_tab = true
 -- Fix not opening in Sway in Arch Linux in Pi 5
 config.enable_wayland = false
 
+wezterm.on('bell', function(window, pane)
+  window:toast_notification('Terminal Bell', 'Bell rung in pane ' .. pane:pane_id(), nil, 10000)
+end)
+
 return config
