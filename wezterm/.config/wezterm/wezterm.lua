@@ -32,7 +32,7 @@ wezterm.on('bell', function(window, pane)
   end
 
   -- Trigger system notification
-  window:toast_notification(title, 'Activity in background pane', nil, 4000)
+  window:toast_notification(title, pane:get_title(), nil, 4000)
 end)
 
 return config
