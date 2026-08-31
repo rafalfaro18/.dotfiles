@@ -7,7 +7,7 @@ TITLE="$3"
 PANE_ID="$4"
 
 # Trigger the notification and capture the user's action
-ACTION=$(notify-send --action=default=Switch -u critical "tmux bell" "$SESSION / $WINDOW / $TITLE")
+ACTION=$(notify-send --action=default=Switch -u normal -t 0 "tmux bell" "$SESSION / $WINDOW / $TITLE")
 
 # If the notification was clicked, switch to the target pane
 if [ "$ACTION" = "default" ]; then
