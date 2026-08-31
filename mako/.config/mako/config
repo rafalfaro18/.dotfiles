@@ -12,6 +12,7 @@ padding=5
 default-timeout=5000
 anchor=top-right
 layer=top
+# You gotta middle click the notification title
 on-button-middle=exec makoctl menu -n "$id" -- wmenu -p 'Select action: '
 
 [urgency=low]
