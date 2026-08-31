@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# Loop through and handle arguments dynamically
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --action=*)
+            # Extract or ignore action strings safely
+            shift
+            ;;
+        -u|-t)
+            # Skip the flag and its following option value
+            shift 2
+            ;;
+        *)
+            # Capture the positional arguments (Summary and Body)
+            if [ -z "$SUMMARY" ]; then
+                SUMMARY="$1"
+            elif [ -z "$BODY" ]; then
+                BODY="$1"
+            fi
+            shift
+            ;;
+    esac
+done
+
+# Fallback text if something slips through empty
+SUMMARY="${SUMMARY:-WSL Notification}"
+BODY="${BODY:-}"
+
+# Escape double quotes for safe PowerShell execution
+ESCAPED_SUMMARY=$(echo "$SUMMARY" | sed 's/"/\\"/g')
+ESCAPED_BODY=$(echo "$BODY" | sed 's/"/\\"/g')
+
+# Send fire-and-forget notification to the Windows Host via powershell.exe
+powershell.exe -NoProfile -Command "
+    [Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime] | Out-Null;
+    [Windows.Data.Xml.Dom.XmlDocument, Windows.Data.Xml.Dom.XmlDocument, ContentType = WindowsRuntime] | Out-Null;
+    
+    \$Template = [Windows.UI.Notifications.ToastNotificationManager]::GetTemplateContent([Windows.UI.Notifications.ToastTemplateType]::ToastText02);
+    \$TextNodes = \$Template.GetElementsByTagName('text');
+    \$TextNodes.Item(0).AppendChild(\$Template.CreateTextNode(\"${ESCAPED_SUMMARY}\")) | Out-Null;
+    \$TextNodes.Item(1).AppendChild(\$Template.CreateTextNode(\"${ESCAPED_BODY}\")) | Out-Null;
+    
+    \$Notifier = [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('WSL tmux');
+    \$Toast = [Windows.UI.Notifications.ToastNotification]::new(\$Template);
+    \$Notifier.Show(\$Toast);
+"
+
