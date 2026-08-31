@@ -9,6 +9,7 @@ padding=5
 default-timeout=5000
 anchor=top-right
 layer=top
+on-button-left=invoke-default-action
 on-button-middle=exec makoctl menu -n "$id" -- wmenu -p 'Select action: '
 
 [urgency=low]
