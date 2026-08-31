@@ -20,3 +20,4 @@ border-color=#565f89
 border-color=#f7768e
 default-timeout=0
 
+on-button-middle=exec makoctl menu -n "$id" -- wmenu -p 'Select action: '
