@@ -15,11 +15,12 @@ config.background = {
   }
 }
 
+config.audible_bell = 'Disabled'
 
 config.hide_tab_bar_if_only_one_tab = true
 --config.window_decorations = "NONE"
 
 -- Fix not opening in Sway in Arch Linux in Pi 5
-config.enable_wayland = false
+--config.enable_wayland = false
 
 return config
