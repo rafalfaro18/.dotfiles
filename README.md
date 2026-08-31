@@ -95,6 +95,11 @@ pkill tmux
 tmux new-session -d && FILE=$(/usr/bin/ls ~/.tmux/resurrect/*.txt | fzf) tmux run-shell "~/.tmux/plugins/tmux-resurrect/scripts/restore.sh $FILE" && tmux attach
 ```
 
+### For notifications
+
+- Ensure ``notify-send`` command exists, and mako is installed if using dwl or dunst in dwm.
+- For WSL: symlink from ``~/.local/bin/notify-send`` to ``~/.dotfiles/scripts/notify-send``
+
 ## Sway
 
 ### Swap Escape and Caps Lock
