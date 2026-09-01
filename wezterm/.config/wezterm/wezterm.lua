@@ -4,7 +4,7 @@ local config = {}
 local dimmer = { brightness = 0.2 }
 
 config.font = wezterm.font 'JetBrainsMonoNL Nerd Font Mono'
-config.font_size = 13
+config.font_size = 12
 config.color_scheme = "tokyonight_night"
 config.background = {
   {
