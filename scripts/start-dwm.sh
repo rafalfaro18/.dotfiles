@@ -16,6 +16,6 @@ xrandr --output HDMI-0 --mode 2560x1440 --primary \
        --output DP-0 --mode 2560x1080 --rate 59.98 --rotate right --right-of HDMI-0 \
        --output DP-2 --off
 # Background applications
-feh --bg-scale ~/Pictures/wallhaven-vgyyxl.png &
+feh --bg-fill ~/Pictures/wallhaven-vgyyxl.png &
 # Launch window manager
 exec dwm
