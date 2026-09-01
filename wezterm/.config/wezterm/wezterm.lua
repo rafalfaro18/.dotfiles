@@ -1,8 +1,10 @@
 local wezterm = require 'wezterm'
 local config = {}
 
+local dimmer = { brightness = 0.2 }
+
 config.font = wezterm.font 'JetBrainsMonoNL Nerd Font Mono'
-config.font_size = 13
+config.font_size = 12
 config.color_scheme = "tokyonight_night"
 config.background = {
   {
@@ -11,8 +13,15 @@ config.background = {
     height = 'Cover',
     horizontal_align = "Right",
     vertical_align = "Top",
-    hsb = { brightness = 0.3 },
+    hsb = dimmer,
   }
+}
+
+config.window_padding = {
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
 }
 
 config.audible_bell = 'Disabled'
