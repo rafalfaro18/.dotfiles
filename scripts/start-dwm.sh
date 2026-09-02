@@ -11,6 +11,7 @@ CONNECTED_MONITORS=$(xrandr | grep -c " connected")
 
 # uncomment dunst if not autostarting service
 #dunst &
+nm-applet &
 picom &
 slstatus &
 
