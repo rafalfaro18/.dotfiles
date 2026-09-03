@@ -1,0 +1,2 @@
+# disable bell for mistakes
+setopt NO_BEEP

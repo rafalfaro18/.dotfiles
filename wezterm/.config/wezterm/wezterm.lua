@@ -24,6 +24,26 @@ config.window_padding = {
   bottom = 0,
 }
 
+-- Helper function to check if a configuration field exists in this WezTerm version
+local function has_config_option(name)
+  if wezterm.config_properties then
+    for _, prop in ipairs(wezterm.config_properties) do
+      if prop == name then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+-- Apply the bottom alignment alignment fix safely
+if has_config_option('window_content_alignment') then
+  config.window_content_alignment = {
+    vertical = 'Bottom',
+    horizontal = 'Left',
+  }
+end
+
 config.audible_bell = 'Disabled'
 
 config.hide_tab_bar_if_only_one_tab = true

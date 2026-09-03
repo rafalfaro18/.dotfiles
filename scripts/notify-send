@@ -41,7 +41,7 @@ powershell.exe -NoProfile -Command "
     \$TextNodes.Item(0).AppendChild(\$Template.CreateTextNode(\"${ESCAPED_SUMMARY}\")) | Out-Null;
     \$TextNodes.Item(1).AppendChild(\$Template.CreateTextNode(\"${ESCAPED_BODY}\")) | Out-Null;
     
-    \$Notifier = [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('WSL tmux');
+    \$Notifier = [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('org.wezfurlong.wezterm');
     \$Toast = [Windows.UI.Notifications.ToastNotification]::new(\$Template);
     \$Notifier.Show(\$Toast);
 "
