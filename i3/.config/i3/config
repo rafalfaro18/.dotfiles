@@ -1,7 +1,7 @@
 # super
-set $mod Mod4
+#set $mod Mod4
 # alt use when remote desktop into this machine when conflicts
-# set $mod Mod1 
+set $mod Mod1 
 
 font pango:JetBrainsMonoNL Nerd Font Mono 12
 floating_modifier $mod
@@ -31,12 +31,15 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+b split h
+bindsym $mod+apostrophe split h
 
 # split in vertical orientation
 bindsym $mod+v split v
 
 bindsym $mod+t split toggle
+
+# toggle borders
+bindsym $mod+b border toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
